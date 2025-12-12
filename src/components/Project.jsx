@@ -7,7 +7,7 @@ const PROJECTS = [
     title: "AI Voice Dispatch Assistant",
     desc: "Automates inbound dispatch calls, collects driver and order details, and logs structured data into Excel for reporting and auditing.",
     image: "/bot.png",
-    tags: ["Twilio", "Node.js", "STT / TTS"],
+    tags: ["Twilio", "Node.js", "LLM"],
   },
   {
     id: 2,
