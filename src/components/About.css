@@ -1,0 +1,73 @@
+/* Section */
+.about-section {
+  background-color: #000000;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 15%;
+  color: #ffffff;
+}
+
+/* Content */
+.about-content {
+  text-align: center;
+  max-width: 900px;
+}
+
+/* Heading */
+.about-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* Highlighted name */
+.highlight {
+  color: #0fbbff;
+}
+
+/* Description text */
+.about-description {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #d1d5db;
+  min-height: 180px; /* prevents layout shift during typing */
+}
+
+/* Typed cursor */
+.typed-cursor {
+  color: #0fbbff;
+  font-size: 1.3rem;
+}
+
+/* Social icons */
+.about-socials {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.about-socials a {
+  font-size: 2rem;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.about-socials a:hover {
+  color: #0fbbff;
+  transform: translateY(-6px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-description {
+    font-size: 1.1rem;
+    min-height: 220px;
+  }
+}

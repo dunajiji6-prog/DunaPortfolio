@@ -1,0 +1,112 @@
+.stats {
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+
+  padding: 50px 10%;
+  border-radius: 18px;
+
+  background:
+    radial-gradient(800px 320px at 50% 50%, rgba(0, 0, 0, 0.12), transparent 60%),
+    rgba(0, 0, 0, 0.03);
+
+  border: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+/* keep content above particles */
+.stat-item {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.stat-item h2 {
+  margin: 0;
+  font-size: 42px;
+  color: #eaf6ff;
+  text-shadow: 0 0 14px rgba(0, 200, 255, 0.45);
+}
+
+.stat-item span {
+  color: rgba(210, 235, 255, 0.75);
+  font-size: 14px;
+  letter-spacing: 0.4px;
+}
+
+/* ================= PARTICLES ================= */
+.stats-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.stats-particles::before,
+.stats-particles::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.8;
+
+  box-shadow:
+    40px 40px #fff,
+    110px 120px #fff,
+    180px 60px #fff,
+    260px 150px #fff,
+    340px 90px #fff,
+    420px 190px #fff,
+    520px 70px #fff,
+    620px 210px #fff,
+    720px 110px #fff,
+    820px 170px #fff,
+    920px 60px #fff;
+
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
+  animation: statsParticleFloat 16s linear infinite;
+}
+
+.stats-particles::after {
+  width: 3px;
+  height: 3px;
+  opacity: 0.55;
+
+  box-shadow:
+    70px 90px #fff,
+    150px 200px #fff,
+    230px 110px #fff,
+    310px 240px #fff,
+    390px 130px #fff,
+    470px 260px #fff,
+    560px 120px #fff,
+    650px 280px #fff,
+    740px 160px #fff,
+    830px 240px #fff,
+    930px 120px #fff;
+
+  animation-duration: 26s;
+}
+
+@keyframes statsParticleFloat {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-600px); }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 800px) {
+  .stats {
+    flex-direction: column;
+    gap: 22px;
+    padding: 36px 10%;
+  }
+
+  .stat-item h2 {
+    font-size: 36px;
+  }
+}
